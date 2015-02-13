@@ -1,0 +1,28 @@
+.page5 {
+  .title {
+    width: 80%;
+    margin-top: 10%;
+  }
+
+  .info {
+    width: 70%;
+    margin-top: 5%;
+  }
+
+  .btn-area {
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .btn-area a {
+    $zoom: 0.6;
+    display: inline-block;
+    background: url(../images/page5-btn.png) 0 0 no-repeat;
+    background-size: 483px*$zoom 52px*$zoom;
+    width: 486px*$zoom/2;
+    height: 55px*$zoom;
+    &.share {
+      background-position-x: -483px/2*$zoom;
+    }
+  }
+}

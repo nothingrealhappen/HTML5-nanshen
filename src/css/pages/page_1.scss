@@ -1,0 +1,17 @@
+.page1 {
+  .title {
+    background: url(../images/page1.png) center center no-repeat;
+    width: 85%;
+    height: 85%;
+    background-size: auto 100%;
+  }
+  .logo {
+    background: url(../images/logo.png) center center no-repeat;
+    $zoom: 0.6;
+    width: 170px * $zoom;
+    height: 33px * $zoom;
+    background-size: 100%;
+    bottom: 15%;
+  }
+
+}
