@@ -55,9 +55,14 @@
         </div>
 
         <div class="swiper-slide page page5" id="userinfo">
-          <img src="assets/images/page5-title.png" class="slideup order b-h-center title">
-          <img src="assets/images/user/wanglihong.png" class="slideup order b-h-center info" id="infoimg">
-          <div class="slideup order b-h-center btn-area">
+          <img src="assets/images/page5-title.png" class="slideup b-h-center title">
+          <div class="a-center loading">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+          <img src="assets/images/user/wanglihong.png" class="slideup b-h-center info" id="infoimg">
+          <div class="slideup b-h-center btn-area" id="userinfo-btn">
             <a href="javascript:;" class="goback shake" id="goback"></a>
             <a href="javascript:;" class="share shake" id="share"></a>
           </div>
@@ -68,10 +73,16 @@
   </div><!-- swiper-container -->
   <script src="assets/js/app.min.js"></script>
   <!--pv,uv探针s-->
-  <script> var sta_collection_time = new Date().getTime();</script>
+  <script src="http://y0.ifengimg.com/20141231/fa.min.js" async></script>
   <script id="sta_collection_new">
-    window.analytics(encodeURIComponent(window.location.href));
-    window.aptracker.collection();
+    var sta_collection_time = new Date().getTime();
+    setTimeout(function() {
+      if (typeof window.analytics == 'function') {
+        window.analytics(encodeURIComponent(window.location.href));
+        window.aptracker.collection();
+      }
+    }, 300);
+
   </script>
   <!--pv,uv探针e-->
 </body>

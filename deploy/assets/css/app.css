@@ -619,7 +619,8 @@ body {
   height: 100%;
   max-width: 640px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-color: #DD3430; }
 
 .swiper-container {
   background: url(../images/bg.png) 0 0 no-repeat #dd3430;
@@ -797,6 +798,68 @@ body {
     -webkit-transform: translateY(0px);
     opacity: 0.5; } }
 
+.loading {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  z-index: 6;
+  height: 30px;
+  display: none; }
+  .loading div {
+    width: 18px;
+    height: 18px;
+    background-color: #E56562;
+    border: 1px solid #fff;
+    margin-right: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .loading .bounce1 {
+    -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s; }
+  .loading .bounce2 {
+    -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s; }
+  .loading.on {
+    display: block; }
+
+@-webkit-keyframes bouncedelay {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  80% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); } }
+
+@keyframes bouncedelay {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  80% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); } }
+
 .page1 .title {
   background: url(../images/page1.png) center center no-repeat;
   width: 85%;
@@ -857,3 +920,6 @@ body {
   height: 33px; }
   .page5 .btn-area a.share {
     background-position-x: -144.9px; }
+.page5 .slideup {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s; }

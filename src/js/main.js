@@ -71,11 +71,16 @@ $(function() {
   var changeInfo = function(username) {
     var $root = $('#userinfo'),
         imgurl = 'assets/images/user/',
-        $img = $root.find('#infoimg');
+        $img = $root.find('#infoimg'),
+        $btns = $root.find('#userinfo-btn');
+        $loading = $root.find('.loading');
 
     $root.data('name', username);
     // ajust img height
     $img.attr('src', imgurl + username + '.png');
+    $img.hide();
+    $loading.show();
+    $btns.hide();
     $img.load(function() {
       if($img.height() < 330) {
         $img.css('width', '80%');
@@ -85,6 +90,9 @@ $(function() {
       } else {
         $img.css('width', '70%');
       }
+      $loading.hide();
+      $img.show();
+      $btns.show();
     });
   };
 

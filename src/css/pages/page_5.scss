@@ -3,17 +3,14 @@
     width: 80%;
     margin-top: 10%;
   }
-
   .info {
     width: 70%;
     margin-top: 5%;
   }
-
   .btn-area {
     text-align: center;
     margin-top: 5%;
   }
-
   .btn-area a {
     $zoom: 0.6;
     display: inline-block;
@@ -24,5 +21,8 @@
     &.share {
       background-position-x: -483px/2*$zoom;
     }
+  }
+  .slideup {
+    transition-delay: 0.3s;
   }
 }
