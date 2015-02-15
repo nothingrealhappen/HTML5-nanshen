@@ -1,24 +1,24 @@
 $(function() {
 
-  var doctitle = '那些年的春晚小鲜肉 - 凤凰娱乐';
+  var doctitle = '那些年的春晚男神 - 凤凰娱乐';
 
   var namehash = {
     feixiang: '费翔',
     pananbang: '潘安邦',
     xiexiaodong: '解晓东',
     caiguoqing: '蔡国庆',
+    liudehua: '刘德华',
     xiaohudui: '小虎队',
     maoning: '毛宁',
     linyilun: '林依轮',
     luozhongxu: '罗中旭',
+    liming: '黎明',
     xietingfeng: '谢霆锋',
     chenxiaodong: '陈晓东',
     wanglihong: '王力宏',
+    zhoujielun: '周杰伦',
     hangeng: '韩庚',
-    liminhao: '李敏镐',
-    luhan: '鹿晗',
-    wuyifan: '吴亦凡',
-    chenweiting: '陈伟霆'
+    liminhao: '李敏镐'
   };
 
   // page slider
@@ -88,14 +88,15 @@ $(function() {
     $loading.show();
     $btns.hide();
     $img.load(function() {
-      if($img.height() < 330) {
-        $img.css('width', '80%');
-        if($img.height() < 280) {
-          $img.css('margin', '10% auto');
-        }
-      } else {
-        $img.css('width', '70%');
-      }
+      var imgH = $img.height(),
+          adjustH;
+      if(imgH > 350) adjustH = '60%';
+      else if(imgH > 330) adjustH = '70%';
+      else if(imgH > 280) adjustH = '80%';
+      else $img.css('margin', '10% auto');
+
+      $img.css('width', adjustH);
+
       $loading.hide();
       $img.addClass('show');
       $btns.show();
