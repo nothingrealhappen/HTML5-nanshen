@@ -697,6 +697,12 @@ body {
   .info {
     width: 70%;
     margin-top: 5%;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    &.show {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
   .btn-area {
     text-align: center;

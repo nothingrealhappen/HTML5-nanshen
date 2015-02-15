@@ -908,7 +908,17 @@ body {
   margin-top: 10%; }
 .page5 .info {
   width: 70%;
-  margin-top: 5%; }
+  margin-top: 5%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+  .page5 .info.show {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
 .page5 .btn-area {
   text-align: center;
   margin-top: 5%; }

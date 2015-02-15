@@ -37,7 +37,13 @@ $(function() {
           }
         }
 
-        if(index < 3) {
+        if(index == '3') {
+          if(!$('#page4').data('clicked')) {
+            swiper.slideTo(2);
+          }
+        }
+
+        if(index < 2) {
           $('#arrowdown').addClass('on');
         } else {
           $('#arrowdown').removeClass('on');
@@ -47,6 +53,7 @@ $(function() {
 
     $('#golist').on('click', function() {
       mySwiper.slideTo(3);
+      $('#page4').data('clicked','1');
     });
 
     // mySwiper.slideTo(4);
@@ -78,7 +85,6 @@ $(function() {
     $root.data('name', username);
     // ajust img height
     $img.attr('src', imgurl + username + '.png');
-    $img.hide();
     $loading.show();
     $btns.hide();
     $img.load(function() {
@@ -91,7 +97,7 @@ $(function() {
         $img.css('width', '70%');
       }
       $loading.hide();
-      $img.show();
+      $img.addClass('show');
       $btns.show();
     });
   };
@@ -118,6 +124,7 @@ $(function() {
     // userinfo goback btn
     $('#userinfo #goback').on('click', function () {
       mySwiper.slideTo(3);
+      $('#infoimg').removeClass('show')
     });
 
     $('#userinfo #share').on('click', function () {
