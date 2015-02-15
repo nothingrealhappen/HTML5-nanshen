@@ -77,14 +77,14 @@ $(function() {
 
   var changeInfo = function(username) {
     var $root = $('#userinfo'),
-        imgurl = 'assets/images/user/',
         $img = $root.find('#infoimg'),
         $btns = $root.find('#userinfo-btn');
-        $loading = $root.find('.loading');
+        $loading = $root.find('.loading'),
+        imgurl = $('#imgurl').attr('src');
 
     $root.data('name', username);
     // ajust img height
-    $img.attr('src', imgurl + username + '.png');
+    $img.attr('src', imgurl.replace('dot', username));
     $loading.show();
     $btns.hide();
     $img.load(function() {
@@ -128,11 +128,12 @@ $(function() {
       $('#infoimg').removeClass('show')
     });
 
+
+
     $('#userinfo #share').on('click', function () {
       $('#sharemask').addClass('show');
-      var name = $('#userinfo').data('name'),
-          sharepicurl = 'assets/images/user/';
-      document.title = '我吃掉了'+ namehash[name] +'，你也来选一款春晚小鲜肉尝尝吧！';
+      var name = $('#userinfo').data('name');
+      document.title = '我吃掉了'+ namehash[name] +'，你也来吃掉你的男神吧！';
     });
 
     $('#sharemask').on('click', function () {
