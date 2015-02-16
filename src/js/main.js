@@ -21,6 +21,15 @@ $(function() {
     liminhao: '李敏镐'
   };
 
+  (function() {
+    // Fix Andorid top Bug .
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+      $('body').addClass('android');
+    }
+  })();
+
   // page slider
   var mySwiper = (function() {
     $('.swiper-container').css('height', $(document).height());
@@ -56,7 +65,7 @@ $(function() {
       $('#page4').data('clicked','1');
     });
 
-    // mySwiper.slideTo(4);
+    mySwiper.slideTo(4);
 
     return mySwiper;
   })();
@@ -91,7 +100,7 @@ $(function() {
       var imgH = $img.height(),
           adjustH;
       if(imgH > 350) adjustH = '60%';
-      else if(imgH > 330) adjustH = '70%';
+      else if(imgH > 320) adjustH = '70%';
       else if(imgH > 280) adjustH = '80%';
       else $img.css('margin', '10% auto');
 
