@@ -65,7 +65,7 @@ $(function() {
       $('#page4').data('clicked','1');
     });
 
-    mySwiper.slideTo(4);
+    // mySwiper.slideTo(4);
 
     return mySwiper;
   })();
