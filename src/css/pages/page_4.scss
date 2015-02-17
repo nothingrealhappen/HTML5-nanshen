@@ -15,11 +15,20 @@
 
   .btn-area a {
     $zoom: 0.5;
-    background: url(../images/page4-cont.png) 0 0 no-repeat;
+    background: url(../images/userlist1.png) 0 0 no-repeat;
     background-size: 538px*$zoom 716px*$zoom;
     width: 125px*$zoom;
     height: 168px*$zoom;
     display: inline-block;
   }
+  .flip-over {
+    bottom: 8%;
+    width: 40%;
+  }
 
+}
+.userlist2 {
+  .btn-area a {
+    background-image: url(../images/userlist2.png);
+  }
 }

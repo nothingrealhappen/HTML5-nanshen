@@ -902,11 +902,17 @@ body.android .page2, body.android .page3, body.android .page4, body.android .pag
   margin-top: 10%;
   text-align: center; }
 .page4 .btn-area a {
-  background: url(../images/page4-cont.png) 0 0 no-repeat;
+  background: url(../images/userlist1.png) 0 0 no-repeat;
   background-size: 269px 358px;
   width: 62.5px;
   height: 84px;
   display: inline-block; }
+.page4 .flip-over {
+  bottom: 8%;
+  width: 40%; }
+
+.userlist2 .btn-area a {
+  background-image: url(../images/userlist2.png); }
 
 .page5 .title {
   width: 80%;

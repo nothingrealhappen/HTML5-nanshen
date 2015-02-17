@@ -3,21 +3,37 @@ $(function() {
   var doctitle = '那些年的春晚男神 - 凤凰娱乐';
 
   var namehash = {
+    zhushimao: '朱时茂',
+    zhangmingmin: '张明敏',
+    lining: '李宁',
     feixiang: '费翔',
     pananbang: '潘安邦',
+    tuhonggang: '屠洪刚',
     xiexiaodong: '解晓东',
     caiguoqing: '蔡国庆',
     liudehua: '刘德华',
     xiaohudui: '小虎队',
     maoning: '毛宁',
+    jinggangshan: '景岗山',
+    guofucheng: '郭富城',
     linyilun: '林依轮',
     luozhongxu: '罗中旭',
+    hanlei: '韩磊',
+    renxianqi: '任贤齐',
     liming: '黎明',
     xietingfeng: '谢霆锋',
+    wenzhaolun: '温兆伦',
+    pucunxin: '濮存昕',
+    zhenyijian: '郑伊健',
     chenxiaodong: '陈晓东',
+    liyundi: '李云迪',
     wanglihong: '王力宏',
     zhoujielun: '周杰伦',
+    linjunjie: '林俊杰',
+    liuqian: '刘谦',
+    lijian: '李健',
     hangeng: '韩庚',
+    yif: 'YIF',
     liminhao: '李敏镐'
   };
 
@@ -40,9 +56,9 @@ $(function() {
       onSlideChangeEnd: function(swiper) {
         var index = swiper.activeIndex;
         // If user doesn't select ,Don't allow slide
-        if(index == '4') {
+        if(index == '5') {
           if(!$('#userinfo').data('name')) {
-            swiper.slideTo(3);
+            swiper.slideTo(4);
           }
         }
 
@@ -65,7 +81,7 @@ $(function() {
       $('#page4').data('clicked','1');
     });
 
-    // mySwiper.slideTo(4);
+    // mySwiper.slideTo(5);
 
     return mySwiper;
   })();
@@ -114,7 +130,7 @@ $(function() {
 
   // user list image sprite page4
   (function(mySwiper) {
-    var $root = $('#userlist'),
+    var $root = $('.js-userlist'),
         spriteW = 140,
         spriteH = 184,
         zoom = 0.5;
@@ -127,13 +143,19 @@ $(function() {
       $(this).css('background-position', bgx + "px " + bgy + "px");
     }).click(function() {
       var name = $(this).data('name');
-      mySwiper.slideTo(4);
+      mySwiper.slideTo(5);
       changeInfo(name);
     });
 
     // userinfo goback btn
     $('#userinfo #goback').on('click', function () {
-      mySwiper.slideTo(3);
+      var name = $('#userinfo').data('name');
+      // back page? by name index
+      var page = $('a[data-name='+name+']').parents('.js-userlist').data('list');
+      if(page == '1') mySwiper.slideTo(3);
+      if(page == '2') mySwiper.slideTo(4);
+      else  mySwiper.slideTo(3);
+
       $('#infoimg').removeClass('show')
     });
 
@@ -142,7 +164,7 @@ $(function() {
     $('#userinfo #share').on('click', function () {
       $('#sharemask').addClass('show');
       var name = $('#userinfo').data('name');
-      document.title = '我吃掉了'+ namehash[name] +'，你也来吃掉你的男神吧！';
+      document.title = '我吃掉了'+ namehash[name] +'，你也来吃掉你的春晚男神吧！';
     });
 
     $('#sharemask').on('click', function () {
