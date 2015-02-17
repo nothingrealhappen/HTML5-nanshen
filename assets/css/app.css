@@ -908,7 +908,7 @@ body.android .page2, body.android .page3, body.android .page4, body.android .pag
   height: 84px;
   display: inline-block; }
 .page4 .flip-over {
-  bottom: 8%;
+  bottom: 75px;
   width: 40%; }
 
 .userlist2 .btn-area a {

@@ -68,7 +68,7 @@ $(function() {
           }
         }
 
-        if(index < 2) {
+        if(index < 2 || index == 3) {
           $('#arrowdown').addClass('on');
         } else {
           $('#arrowdown').removeClass('on');
