@@ -4,7 +4,8 @@
     margin-top: 10%;
   }
   .info {
-    width: 70%;
+    width: 100%;
+    top: -5%;
     margin-top: 5%;
     transform: scale(0);
     transition: all 0.3s ease;
@@ -15,7 +16,7 @@
   }
   .btn-area {
     text-align: center;
-    margin-top: 5%;
+    bottom: 20px;
   }
   .btn-area a {
     $zoom: 0.6;

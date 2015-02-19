@@ -107,25 +107,28 @@ $(function() {
         $loading = $root.find('.loading'),
         imgurl = $('#imgurl').attr('src');
 
-    $root.data('name', username);
     // ajust img height
+    $root.data('name', username);
     $img.attr('src', imgurl.replace('dot', username));
     $loading.show();
     $btns.hide();
+    // $img.css('width', 'auto');
     $img.load(function() {
-      var imgH = $img.height(),
-          adjustH;
-      if(imgH > 350) adjustH = '60%';
-      else if(imgH > 320) adjustH = '70%';
-      else if(imgH > 280) adjustH = '80%';
-      else $img.css('margin', '10% auto');
+      // var imgH = $img.height(),
+      //     adjustH;
+      // if(imgH > 350) adjustH = '60%';
+      // else if(imgH > 335) adjustH = '65%';
+      // else if(imgH > 320) adjustH = '70%';
+      // else if(imgH > 280) adjustH = '80%';
+      // else $img.css('margin', '10% auto');
 
-      $img.css('width', adjustH);
+      // $img.css('width', adjustH);
 
       $loading.hide();
       $img.addClass('show');
       $btns.show();
     });
+
   };
 
   // user list image sprite page4
@@ -156,7 +159,9 @@ $(function() {
       if(page == '2') mySwiper.slideTo(4);
       else  mySwiper.slideTo(3);
 
-      $('#infoimg').removeClass('show')
+      $('#userinfo').removeData('name');
+      var dotimg = $('#infoimg').data('dot');
+      $('#infoimg').removeClass('show').attr('src', dotimg);
     });
 
 

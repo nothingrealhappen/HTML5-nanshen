@@ -762,7 +762,7 @@ body {
   background: url(../images/top.png) no-repeat center center;
   background-size: 100%;
   z-index: 5;
-  bottom: 34px;
+  bottom: 5%;
   opacity: 1;
   -webkit-animation: flipBottom infinite 1.5s ease-in;
           animation: flipBottom infinite 1.5s ease-in;
@@ -908,7 +908,7 @@ body.android .page2, body.android .page3, body.android .page4, body.android .pag
   height: 84px;
   display: inline-block; }
 .page4 .flip-over {
-  bottom: 75px;
+  bottom: 9.5%;
   width: 40%; }
 
 .userlist2 .btn-area a {
@@ -918,7 +918,8 @@ body.android .page2, body.android .page3, body.android .page4, body.android .pag
   width: 80%;
   margin-top: 10%; }
 .page5 .info {
-  width: 70%;
+  width: 100%;
+  top: -5%;
   margin-top: 5%;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
@@ -932,7 +933,7 @@ body.android .page2, body.android .page3, body.android .page4, body.android .pag
             transform: scale(1); }
 .page5 .btn-area {
   text-align: center;
-  margin-top: 5%; }
+  bottom: 20px; }
 .page5 .btn-area a {
   display: inline-block;
   background: url(../images/page5-btn.png) 0 0 no-repeat;

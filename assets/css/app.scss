@@ -561,7 +561,7 @@ body {
   background: url(../images/top.png) no-repeat center center;
   background-size:100%;
   z-index: 5;
-  bottom: 34px;
+  bottom: 5%;
   opacity: 1;
   animation:flipBottom infinite 1.5s ease-in;
   animation-direction:alternate;
@@ -698,7 +698,7 @@ body.android {
     display: inline-block;
   }
   .flip-over {
-    bottom: 75px;
+    bottom: 9.5%;
     width: 40%;
   }
 
@@ -715,7 +715,8 @@ body.android {
     margin-top: 10%;
   }
   .info {
-    width: 70%;
+    width: 100%;
+    top: -5%;
     margin-top: 5%;
     transform: scale(0);
     transition: all 0.3s ease;
@@ -726,7 +727,7 @@ body.android {
   }
   .btn-area {
     text-align: center;
-    margin-top: 5%;
+    bottom: 20px;
   }
   .btn-area a {
     $zoom: 0.6;
